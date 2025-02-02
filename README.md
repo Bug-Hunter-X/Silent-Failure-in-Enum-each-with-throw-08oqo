@@ -1,0 +1,3 @@
+# Silent Failure in Elixir Enum.each with throw
+
+This example demonstrates a subtle issue when using `throw` inside `Enum.each` in Elixir.  While `throw` is intended to interrupt execution, it behaves unexpectedly within the context of `Enum.each`.  The code will not throw the exception as expected; instead, it quietly completes. This can lead to hard-to-debug issues.  The solution demonstrates using `Enum.reduce` or a similar construct for more predictable error handling.
